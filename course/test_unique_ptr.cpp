@@ -1,5 +1,7 @@
 #include <cassert>
 #include <memory>
+#include <iostream>
+#include "my_unique_ptr.cpp"
 
 #define IT_SHOULD(test_name, test_body) \
   struct it_should_##test_name {        \
@@ -22,7 +24,7 @@ struct Foo {
 };
 
 template <typename T>
-using type_under_test = std::unique_ptr<T>;
+using type_under_test = MyUniquePtr<T>;
 
 int main() {
   {
@@ -210,4 +212,5 @@ int main() {
       p->bar();
     });
   }
+  std::cout << "PASS\n";
 }
