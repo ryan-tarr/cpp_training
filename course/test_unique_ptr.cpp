@@ -1,6 +1,7 @@
 #include <cassert>
 #include <memory>
 #include <iostream>
+#include "soln_unique_ptr.cpp"
 #include "my_unique_ptr.cpp"
 
 #define IT_SHOULD(test_name, test_body) \

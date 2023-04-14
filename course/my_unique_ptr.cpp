@@ -10,11 +10,7 @@ class MyUniquePtr {
     }
 
     // destructor
-    ~MyUniquePtr(){
-        if (ptr != nullptr){
-            delete ptr;
-        }
-    }
+    ~MyUniquePtr(){ delete ptr; }
 
     // copy
     MyUniquePtr(const MyUniquePtr<T>& other)=delete;
